@@ -8,14 +8,14 @@
 int main(void)
 {
 
-	char c;
+	int i;
 
-	c = 'a';
+	i = 0;
 
-	while (c <= 'z')
+	while (i < 10)
 	{
-		putchar(c);
-		c++;
+		printf("%d", i);
+		i++;
 	}
 	putchar('\n');
 	return (0);
