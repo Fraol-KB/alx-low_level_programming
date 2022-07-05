@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -7,6 +8,7 @@
  */
 int main(void)
 {
-    print_alphabet_x10();
+	printf( "%d",_islower('H'));
+	printf( "%d",_islower('h'));
     return (0);
 }
