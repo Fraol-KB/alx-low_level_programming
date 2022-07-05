@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * print_alphabet - Prints A to Z.
+ *
+ * Return: Always 0
+ */
 int print_alphabet(void)
 {
 	char c;
@@ -7,8 +12,7 @@ int print_alphabet(void)
 	c = 'a';
 	while (c <= 'z')
 	{
-		if (c != 'e' && c != 'q')
-			_putchar(c);
+		_putchar(c);
 		c++;
 	}
 	_putchar('\n');
