@@ -12,7 +12,7 @@ int main(void)
 	fe = 0;
 	f1 = 1;
 	f2 = 2;
-	for (; f3 < 4000000;)
+	while (f3 < 4000000)
 	{
 		f3 = f1 + f2;
 		f1 = f2;
@@ -20,6 +20,7 @@ int main(void)
 		if ((f1 % 2) == 0)
 			fe += f1;
 	}
+
 	printf("%ld\n", fe);
 	return (0);
 }
