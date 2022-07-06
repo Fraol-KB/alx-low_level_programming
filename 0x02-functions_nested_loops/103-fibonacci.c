@@ -12,12 +12,12 @@ int main(void)
 	fe = 0;
 	f1 = 1;
 	f2 = 2;
-	for (a = 0; f3 < 4000000; a++)
+	for (; f3 < 4000000;)
 	{
 		f3 = f1 + f2;
 		f1 = f2;
 		f2 = f3;
-		if (f1 % 2 == 0)
+		if ((f1 % 2) == 0)
 			fe += f1;
 	}
 	printf("%ld\n", fe);
