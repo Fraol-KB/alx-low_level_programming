@@ -7,19 +7,19 @@
 int main(void)
 {
 	int a;
-	long int f1, f2, f3;
+	long int f1, f2, f3, fe;
 
+	fe = 0;
 	f1 = 1;
 	f2 = 2;
-	printf("%ld", f1);
-	printf(", %ld", f2);
 	for (a = 0; f3 < 4000000; a++)
 	{
 		f3 = f1 + f2;
-		printf(", %ld", f3);
 		f1 = f2;
 		f2 = f3;
+		if (f1 % 2 == 0)
+			fe += f1;
 	}
-	printf("\n");
+	printf("%ld\n", fe);
 	return (0);
 }
