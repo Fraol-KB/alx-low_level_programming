@@ -25,7 +25,6 @@ void print_number(int n)
 
 	d = 0;
 	m= (m * 10) + 1;
-
 	while (m > 0)
 	{
 		d *= 10;
@@ -33,7 +32,7 @@ void print_number(int n)
 		m /= 10;
 	}
 
-	while (d / 10 > 0 )
+	while (d / 10 > 0)
 	{
 		_putchar('0' + (d % 10));
 		d /= 10;
