@@ -7,21 +7,19 @@
  */
 int _atoi(char *s)
 {
-	int i, r;
+	int i, r, neg;
 
 	i = 0;
 	r = 0;
+	neg = 1;
 	while (*(s + i))
 	{
+		if (*(s + i) == '-')
+			neg = -1;
 		if (*(s + i) >= '0' && *(s + i) <= '9')
 		{
 			r = r * 10;
-			if (*(s + i - 1) == '-' && r == 0)
-				r = -1 * (*(s + i) - '0');
-			else if (r == 0)
-				r = 1 * (*(s + i) - '0');
-			else
-				r += (*(s + i) - '0');
+			r += (*(s + i) - '0');
 
 			if (*(s + i + 1) > '9' || *(s + i + 1) < '0')
 			{
@@ -31,5 +29,5 @@ int _atoi(char *s)
 		i++;
 	}
 
-	return (r);
+	return (r * neg);
 }
