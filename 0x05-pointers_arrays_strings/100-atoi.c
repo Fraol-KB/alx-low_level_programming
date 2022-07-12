@@ -15,7 +15,7 @@ int _atoi(char *s)
 	while (*(s + i))
 	{
 		if (*(s + i) == '-')
-			neg = -1;
+			neg *= -1;
 		if (*(s + i) >= '0' && *(s + i) <= '9')
 		{
 			r = r * 10;
