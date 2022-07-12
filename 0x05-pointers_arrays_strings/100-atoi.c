@@ -11,7 +11,7 @@ int _atoi(char *s)
 
 	i = 0;
 	r = 0;
-	while (*(src + i))
+	while (*(s + i))
 	{
 		if (*(s + i) >= '0' && *(s + i) <= '9')
 		{
