@@ -7,7 +7,7 @@
  */
 int _atoi(char *s)
 {
-	int i, r, neg;
+	unsigned int i, r, neg;
 
 	i = 0;
 	r = 0;
