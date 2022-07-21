@@ -1,22 +1,5 @@
 #include "main.h"
 
-
-/**
- * is_prime_number - checks if a number is a prime number.
- * @n: number.
- * Return: 1 if true. 0 if false.
- */
-int is_prime_number(int n)
-{
-	if (n == 0)
-		return (0);
-	if (n < 0)
-		return (0);
-	if (n == 1)
-		return (0);
-	return (divider_check(n, 2));
-}
-
 /**
  * divider_check - detects if an input number is a prime number.
  * @n: number.
@@ -33,4 +16,19 @@ int divider_check(int n, int c)
 			return (0);
 	}
 	return (divider_check(n, c + 1));
+}
+/**
+ * is_prime_number - checks if a number is a prime number.
+ * @n: number.
+ * Return: 1 if true. 0 if false.
+ */
+int is_prime_number(int n)
+{
+	if (n == 0)
+		return (0);
+	if (n < 0)
+		return (0);
+	if (n == 1)
+		return (0);
+	return (divider_check(n, 2));
 }
