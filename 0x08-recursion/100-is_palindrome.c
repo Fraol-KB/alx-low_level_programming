@@ -24,7 +24,7 @@ int palindrome_recursion(char *s, int left_end, int right_end)
 {
 	if (*(s + left_end) == *(s + right_end))
 	{
-		if (left_end == right_end)
+		if (left_end == right_end || left_end == right_end + 1)
 			return (1);
 		left_end++;
 		right_end--;
