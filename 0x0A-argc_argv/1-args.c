@@ -7,7 +7,8 @@
  * @argv: array of argurment.
  * Return: number of args.
  */
-int main(int argc, char *argv[])
+int main(int argc, char *argv[] __attribute__((unused)))
 {
-	printf("%s\n", --argc);
+	printf("%d\n", --argc);
+	return (0);
 }
