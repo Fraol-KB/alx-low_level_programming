@@ -19,15 +19,18 @@ int main(int argc, char *argv[])
 
 	cents = atoi(argv[1]);
 
-	ncoins += cents / 25;
-	cents %= 25;
-	ncoins += cents / 10;
-	cents %= 10;
-	ncoins += cents / 5;
-	cents %= 5;
-	ncoins += cents / 2;
-	cents %= 2;
-	ncoins += cents / 1;
+	if (cents > 0)
+	{
+		ncoins += cents / 25;
+		cents %= 25;
+		ncoins += cents / 10;
+		cents %= 10;
+		ncoins += cents / 5;
+		cents %= 5;
+		ncoins += cents / 2;
+		cents %= 2;
+		ncoins += cents / 1;
+	}
 
 	printf("%d\n", ncoins);
 	return (0);
