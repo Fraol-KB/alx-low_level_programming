@@ -38,9 +38,9 @@ char *argstostr(int ac, char **av)
 	{
 		if (av[i][j] == '\0')
 		{
-			s[ia] = '\n';
+			s[k] = '\n';
 			i++;
-			ia++;
+			k++;
 			j = 0;
 		}
 		if (k < char_len - 1)
