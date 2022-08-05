@@ -27,11 +27,20 @@ void print_all(const char *const format, ...)
 			j++;
 		}
 		if (format[i] == 'c')
-			printf("%c", va_arg(vlist, int)), c = 1;
+		{
+			printf("%c", va_arg(vlist, int));
+			c = 1;
+		}
 		else if (format[i] == 'i')
-			printf("%d", va_arg(vlist, int)), c = 1;
+		{
+			printf("%d", va_arg(vlist, int));
+			c = 1;
+		}
 		else if (format[i] == 'f')
-			printf("%f", va_arg(vlist, double)), c = 1;
+		{
+			printf("%f", va_arg(vlist, double));
+			c = 1;
+		}
 		else if (format[i] == 's')
 		{
 			str = va_arg(vlist, char *), c = 1;
