@@ -24,14 +24,18 @@ void print_all(const char *const format, ...)
 			}
 			j++;
 		}
-		if (format[i] == 'c')
-			printf("%c", va_arg(vlist, int)), c = 1;
-		else if (format[i] == 'i')
-			printf("%d", va_arg(vlist, int)), c = 1;
-		else if (format[i] == 'f')
-			printf("%f", va_arg(vlist, double)), c = 1;
-		else if (format[i] == 's')
+		switch (format[i])
 		{
+		case 'c':
+			printf("%c", va_arg(vlist, int)), c = 1;
+			break;
+		case 'i':
+			printf("%d", va_arg(vlist, int)), c = 1;
+			break;
+		case 'f':
+			printf("%f", va_arg(vlist, double)), c = 1;
+			break;
+		case 's':
 			str = va_arg(vlist, char *), c = 1;
 			if (!str)
 			{
@@ -39,6 +43,7 @@ void print_all(const char *const format, ...)
 				break;
 			}
 			printf("%s", str);
+			break;
 		}
 		i++;
 	}
