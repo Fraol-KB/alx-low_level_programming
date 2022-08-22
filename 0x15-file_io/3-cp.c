@@ -26,8 +26,7 @@ void close_w(int fdread, int fdwrite)
  */
 int main(int argc, char *argv[])
 {
-	char buffer[1024];
-	char *file_from, *file_to;
+	char buffer[1024], *file_from, *file_to;
 	int fdread, fdwrite;
 	ssize_t rd = 1024, wr;
 
