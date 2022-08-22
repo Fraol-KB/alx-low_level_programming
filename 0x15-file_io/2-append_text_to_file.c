@@ -3,7 +3,7 @@
 /**
  * append_text_to_file - Function that creates a file
  * or appends text
- * @filename: filename 
+ * @filename: filename
  * @text_content: content
  * Return: -1 if NULL in FN, 1 on sucess
  */
